@@ -38,6 +38,7 @@
             <th scope="col">Last Name</th>
             <th scope="col">Address</th>
             <th scope="col">Gender</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -60,6 +61,16 @@
             <% } else{ %>
             <td>Male</td>
             <% } %>
+
+            <td>
+              <a
+                href="/edit-crud?id=<%= data[i].id %>"
+                type="button"
+                class="btn btn-primary"
+                >Edit</a
+              >
+              <a type="button" class="btn btn-danger">Delete</a>
+            </td>
           </tr>
           <% } %>
         </tbody>
