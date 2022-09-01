@@ -50,6 +50,7 @@ let putCRUD = async (req, res) => {
 
 let deleteCRUD = async (req, res) => {
   let id = req.query.id;
+  console.log(id);
   if (id) {
     await CRUDService.deleteUserById(id);
     return res.redirect("/get-crud");
