@@ -16,7 +16,6 @@ let handleUserLogin = (email, password) => {
           let check = await bcrypt.compareSync(password, user.password);
           if (check) {
             userData.errCode = 0;
-            userData.errMessage = "ok";
             delete user.password;
             userData.user = user;
           } else {
